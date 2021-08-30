@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
     private userSub: Subscription;
     isAuthenticated: boolean = false;
     
-constructor(private dataStorageService:DataStorageService, private authService: AuthService){}
+    constructor(private dataStorageService:DataStorageService, private authService: AuthService){}
 
     ngOnInit(){
         this.userSub = this.authService.user.subscribe(user=>{
@@ -34,6 +34,10 @@ constructor(private dataStorageService:DataStorageService, private authService: 
 
     onSelect(choice: string) {
         this.sendChoice.emit(choice);
+    }
+
+    onLogout(){
+        this.authService.logout();
     }
 
     ngOnDestroy(){
