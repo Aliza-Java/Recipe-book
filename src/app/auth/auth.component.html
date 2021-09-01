@@ -26,8 +26,6 @@
                 name="password"
                 required
                 minlength="6">
-       
-        <button (click)="see(authForm)">Click</button>
         <div>
             <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">{{isLoginMode? 'Login' : 'Sign up'}}</button> |
             <button class="btn btn-primary" type="button" (click)="onSwitchMode()">

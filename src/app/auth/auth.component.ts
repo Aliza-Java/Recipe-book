@@ -24,11 +24,6 @@ export class AuthComponent implements OnInit {
         this.isLoginMode = !this.isLoginMode;
     }
 
-    //for debugging purposes
-    see(form: NgForm) {
-        console.log(form);
-    }
-
     onSubmit(authForm: NgForm) {
         if (!authForm.valid) {
             return;
@@ -45,8 +40,8 @@ export class AuthComponent implements OnInit {
         }
 
         authObs.subscribe(resData => {
-                console.log(resData);
-                this.isLoading = false;
+            console.log(resData);
+            this.isLoading = false;
                 this.router.navigate(['/recipes']);
             }, errorMessage => {
                 this.error = errorMessage;
