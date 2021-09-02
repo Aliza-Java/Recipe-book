@@ -101,10 +101,10 @@ export class AuthService {
                 errorMessage = 'This email exists already.';
                 break;
             case 'EMAIL_NOT_FOUND':
-                errorMessage = 'This email does not exist';
+                errorMessage = 'This email does not exist.';
                 break;
             case 'INVALID_PASSWORD':
-                errorMessage = 'The password is incorrect';
+                errorMessage = 'The password is incorrect!';
                 break;
         }
         return throwError(errorMessage);
