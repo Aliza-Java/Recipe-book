@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { ShoppingListService } from 'src/app/shopping-list/shopping-list.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { RecipesService } from '../../shared/recipes.service';
+import { RecipesService } from '../recipes.service';
 
 @Component({
     selector: 'app-recipe-detail',
@@ -43,5 +43,4 @@ export class RecipeDetailComponent implements OnInit {
         this.recipesService.deleteRecipe(this.id);
 this.router.navigate(['/recipes']);
     }
-
 }

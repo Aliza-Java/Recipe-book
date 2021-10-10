@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
-import { RecipesService } from '../../shared/recipes.service';
+import { RecipesService } from '../recipes.service';
 
 @Component({
     selector: 'app-recipe-edit',
@@ -99,5 +99,4 @@ onDeleteIngredient(index:number){
     onCancel() {
         this.router.navigate(['../'], { relativeTo: this.route });
     }
-
 }
